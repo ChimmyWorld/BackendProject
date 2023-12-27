@@ -1,0 +1,16 @@
+footer {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    height: 204.84px; 
+    width: 100%;
+}
+.cominfo ul{
+    list-style: none;
+}
+footer {
+    position: relative;
+    top: 100%;
+}

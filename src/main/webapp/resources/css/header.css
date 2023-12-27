@@ -1,0 +1,189 @@
+body {
+    width: 1500px;
+    margin: 0 auto;
+    height: 3000px;
+}
+
+.nav {
+    display: flex;
+}
+header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: aliceblue;
+}
+
+.menu{
+    position: relative;
+    left: 180px;
+}
+.menu > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.menu > li:hover {
+    color:rgb(122, 122, 187);
+}
+
+hr {
+    color: #aaaaaa;
+}
+.w-btn {
+    position: relative;
+    margin: 20px;
+    height: 45px;
+    left: 740px;
+    border: #aaaaaa;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    width: 115px;
+}
+.t-btn {        /*acc management < 버튼*/
+    position: relative;
+    margin: 20px;
+    height: 45px;
+    right: 110px;
+    top: 40px;
+    width: 150px;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-blue {
+    background-color: white(192, 188, 188, 0.678);
+    color: black;
+}
+.w-btn-blue-outline {
+    border: 3px solid #aaaaaa;
+    color: black;
+}
+.n-btn {
+    position: relative;
+    height: 45px;
+    left: 740px;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    width: 115px;
+}
+
+.n-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.n-btn-blue {
+    background-color: #0090f9;
+    color: #d4dfe6;
+}
+.n-btn-blue-outline {
+    border: 3px solid #0090f9;
+    color: #6e6e6e;
+}
+.wn-btn {
+    position: relative;
+    right: 110px;
+}
+.hr{
+    border: 1px solid rgba(8, 6, 6, 0.411);;
+  }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color:rgb(122, 122, 187);
+}
+
+.user img{
+    position: relative;
+    left: 850px;
+    width: 50px;
+    border-radius: 60px;
+}
+.dropdown_user {
+    position: relative;
+    display: inline-block;
+    left: 850px;
+  }
+  
+  .dropdown_user a {
+    font-size: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .dropdown_user img {
+      width: 30px;
+      height: 30px;
+      border-radius: 150px;
+  }
+  
+  .dropdown_list {
+    position: absolute;
+    display: none;
+    width: 157px;
+    background: white;
+    border-radius: 5%;
+    box-shadow: 4px 4px 10px #c5b0b0;
+  }
+  
+  .dropdown_list a {
+    display: block;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .dropdown_list a div {
+    text-align: left;
+    padding: 0.5rem;
+  }
+  .dropdown_list img {
+      width: 15px;
+      height: 15px;
+  }
+  
+  
+  .dropdown_user:hover .dropdown_list {
+    display: block;
+  }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.AccountDAO">
+
+	<select id="test" resultType="String">
+
+		select banner from v$version
+	</select>
+
+	<select id="selectOne"
+		resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where userid = #{userid} and userpw = #{userpw}
+	</select>
+
+	<insert id="insert"
+		parameterType="com.itbank.model.vo.AccountVO">
+
+		insert into
+		account(userid, userpw, nick, email)
+		values(#{userid}, #{userpw}, #{nick}, #{email})
+	</insert>
+
+	<select id="findID" parameterType="String"
+		resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where email = #{email}
+	</select>
+
+	<select id="findPW"
+		parameterType="com.itbank.model.vo.AccountVO"
+		resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where userid = #{userid} and email = #{email}
+	</select>
+
+	<delete id="delete"
+		parameterType="com.itbank.model.vo.AccountVO">
+
+		delete account where idx = #{idx}
+	</delete>
+
+	<update id="updatePW"
+		parameterType="com.itbank.model.vo.AccountVO">
+
+		update account
+		set
+		userpw = #{userpw}
+		where idx = #{idx}
+	</update>
+
+	<select id="searchId" resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where userid = #{userid}
+	</select>
+
+	<select id="searchNick"
+		resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where nick = #{nick}
+	</select>
+
+	<select id="searchEmail"
+		resultType="com.itbank.model.vo.AccountVO">
+
+		select * from account where email = #{email}
+	</select>
+	
+	<update id="updateProfileImg"
+		parameterType="com.itbank.model.vo.AccountVO">
+		update account
+		set
+		profile_img = #{profile_img}
+		where idx = #{idx}
+	</update>
+	
+	<update id="setProfileImgDefault"
+		parameterType="int">
+		update account set profile_img = 'default.jpg' where idx = #{idx}	
+	</update>
+</mapper>

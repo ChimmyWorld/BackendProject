@@ -1,0 +1,84 @@
+.login{
+    position: relative;
+    bottom: 1800px;
+    left: 600px;
+}
+.login li{
+    list-style: none;
+}
+.loginchar {
+    color: #aaaaaa;
+}
+.login input {
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+.mylist{
+    position: relative;
+    bottom: 1500px;
+    padding: 10px;
+    line-height: 5em;    
+}
+.mylist ul{
+    list-style: none;
+    font-size: 30px;
+    font-weight: 1000;
+}
+.f-line {
+    border-left : 2px solid #aaaaaa;
+    height : 50%;
+    position: relative;
+    left: 300px;
+  }
+.s-line{
+    border: 1px solid #aaaaaa;
+    width : 80%;
+    position: relative;
+    left: 300px;
+    bottom: 1400px;
+  }
+.a-btn {
+    position: relative;
+    margin: 20px;
+    height: 45px;
+    left: 1240px;
+    bottom: 1800px;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.a-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.a-btn-blue {
+    background-color: #0090f9;
+    color: #d4dfe6;
+}
+.a-btn-blue-outline {
+    border: 3px solid #0090f9;
+    color: #6e6e6e;
+}
+.hhr {
+    position: relative;
+    bottom: 10px;
+    border: 1px solid #aaaaaa;
+}

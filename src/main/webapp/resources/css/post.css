@@ -1,0 +1,42 @@
+.mylist{
+    position: relative;
+    bottom: 1500px;
+    padding: 10px;
+    line-height: 5em;    
+}
+.mylist ul{
+    list-style: none;
+    font-size: 30px;
+    font-weight: 1000;
+}
+.f-line {
+    border-left : 2px solid #aaaaaa;
+    height : 50%;
+    position: relative;
+    left: 300px;
+  }
+.s-line{
+    border: 1px solid #aaaaaa;
+    width : 80%;
+    position: relative;
+    left: 300px;
+    bottom: 1400px;
+  }
+.myWrite {
+    position: relative;
+    bottom: 1650px;
+    left: 550px;
+}
+.myWrite .column{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.subtitle {
+    display: flex;
+}
+.hhr {
+    position: relative;
+    bottom: 10px;
+    border: 1px solid #aaaaaa;
+}

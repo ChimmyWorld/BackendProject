@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.ReplyDAO">
+	<select id="selectReplyAll"
+			resultType="com.itbank.model.vo.Reply_ListVO"
+			parameterType="int">
+		select * from reply_list
+			where board_idx = #{idx}
+	</select>
+	
+	<insert id="insertReply"
+		parameterType="com.itbank.model.vo.ReplyVO">
+		insert into reply 
+			values(default, #{idx}, #{type}, #{contents}, #{writer}, default)
+	</insert>
+	
+	<delete id="deleteReply"
+		parameterType="int">
+		delete reply where idx = ${idx}
+	</delete>
+	
+	<select id="countOne"
+			resultType="int"
+			parameterType="int">
+		select count(*) from reply where board_idx = #{idx}
+	</select>
+	
+	<select id="selectMyReplyList"
+		resultType="com.itbank.model.vo.ReplyVO"
+		parameterType="hashmap">
+		select * from reply 
+			where writer = #{user.nick} and type like '%${p.type}%' and ${p.keyword} like '%${p.search}%' 
+			order by ${p.order} desc
+			offset #{p.offset} rows 
+			fetch first #{p.perCount} rows only
+	</select>
+	
+	<select id="selectBoardIdx"
+		resultType="com.itbank.model.vo.ReplyVO">
+		select type, board_idx from reply where idx = #{idx}
+	</select>
+	
+	<select id="totalMyReply"
+		parameterType="com.itbank.model.vo.BoardVO"
+		resultType="int">
+		select count(*) from reply
+		where writer = #{nick}
+	</select>
+	
+	<update id="updateReply"
+		parameterType="com.itbank.model.vo.ReplyVO">
+		update reply
+			set contents = #{contents, jdbcType=VARCHAR}
+			where idx = #{idx}	
+	</update>
+	
+</mapper>

@@ -1,0 +1,106 @@
+body {
+    width: 1500px;
+    margin: 0 auto;
+    height: 3000px;
+    
+}
+.login li{
+    list-style: none;
+}
+.loginchar {
+    color: #aaaaaa;
+}
+.login input {
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+.loginheader div{
+    display: flex;
+    justify-content: center;
+}
+.login {
+    display: flex;
+    justify-content: center;
+}
+.hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 16px;
+}
+
+
+.headerinfo ul{
+    justify-content: center;
+    color: #aaaaaa;
+    list-style: none;
+}
+.headerinfo li {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 2px 0px;
+}
+h4 {
+    height: 10px;
+    margin: 30px;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    right: 53px;
+    margin: 20px;
+    height: 45px;
+    width: 150px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-blue {
+    background-color: #0090f9;
+    color: #d4dfe6;
+}
+.w-btn-blue-outline {
+    border: 3px solid #0090f9;
+    color: #6e6e6e;
+}
+.findIdBtn {
+    position: relative;
+    left: 605px;
+    top: 45px;
+
+}

@@ -1,0 +1,37 @@
+button {
+    margin: 20px;
+    height: 45px;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+ 
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.w-btn-blue {
+    background-color: #0090f9;
+    color: #d4dfe6;
+}
+.w-btn-blue-outline {
+    border: 3px solid #0090f9;
+    color: #6e6e6e;
+}

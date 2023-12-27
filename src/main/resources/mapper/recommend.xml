@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.RecommendDAO">
+
+	<select id="countGood"
+		parameterType="com.itbank.model.vo.RecommendVO"
+		resultType="int">
+	
+		select count(*) as count from recommend
+			where board_idx = #{board_idx} and good = #{good}
+	</select>
+	
+	<select id="userRec"
+		resultType="Integer">
+	
+		select good from recommend 
+			where board_idx = #{board_idx} and recommender = #{recommender}
+	</select>
+	
+	<insert id="insertRecommend"
+		parameterType="com.itbank.model.vo.RecommendVO">
+		
+		insert into recommend values(#{board_idx}, #{recommender}, #{good})
+	</insert>
+	
+	<delete id="deleteRecommend"
+		parameterType="com.itbank.model.vo.RecommendVO">
+	
+		delete recommend 
+			where board_idx = #{board_idx} and recommender = #{recommender}
+	</delete>
+
+</mapper>

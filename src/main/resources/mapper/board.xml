@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.BoardDAO">
+
+	<select id="selectPreview"
+		resultType="com.itbank.model.vo.Board_Count_ListVO">
+		select * from board_list_with_count
+		where type = #{idx}
+		order by idx desc
+		offset 0 rows
+		fetch first 5 rows only
+	</select>
+
+	<select id="selectList" 
+			resultType="com.itbank.model.vo.Board_Count_ListVO"
+			parameterType="com.itbank.components.Paging">
+			select * from board_list_with_count
+			where type = #{type} and ${keyword} like '%${search}%' 
+			order by ${order} desc
+			offset #{offset} rows 
+			fetch first #{perCount} rows only
+	</select>
+
+	<select id="selectOne" resultType="com.itbank.model.vo.Board_ListVO">
+		select * from board_list where idx = #{idx}
+	</select>
+
+	<insert id="insert" parameterType="com.itbank.model.vo.BoardVO">
+		insert into board
+		(type, title, contents, writer, article_img) values
+		(#{type}, #{title}, #{contents}, #{writer}, #{article_img, jdbcType=VARCHAR})
+	</insert>
+
+	<delete id="delete" parameterType="int">
+		delete from board where idx = #{idx}
+	</delete>
+
+	<update id="update" parameterType="com.itbank.model.vo.BoardVO">
+		update board
+		set title=#{title}, contents=#{contents}, article_img=#{article_img, jdbcType=VARCHAR}
+		where idx=#{idx}
+	</update>
+
+	<update id="countUp" parameterType="int">
+		update board
+		set view_count = view_count + 1
+		where idx = #{idx}
+	</update>
+
+	<select id="selectMyBoardList"
+		resultType="com.itbank.model.vo.BoardVO"
+		parameterType="hashmap">
+		select * from board 
+			where writer = #{user.nick} and type like '%${p.type}%' and ${p.keyword} like '%${p.search}%' 
+			order by ${p.order} desc
+			offset #{p.offset} rows 
+			fetch first #{p.perCount} rows only
+	</select>
+
+	<select id="selectIdx" resultType="int">
+		select idx from board
+		order by idx desc
+		fetch first rows only
+	</select>
+	
+	<select id="totalBoard"
+		parameterType="int"
+		resultType="int">
+		select count(*) from board
+		where type = #{type}
+	</select>
+	
+	<select id="totalMyBoard"
+		parameterType="com.itbank.model.vo.BoardVO"
+		resultType="int">
+		select count(*) from board
+		where writer = #{nick}
+	</select>
+
+<!-- 추천 -->
+<select id="selectRecommend"
+	resultType="integer">
+	select good from recommend where board_idx = #{idx}
+	and recommender = #{recommender}
+</select>
+
+</mapper>

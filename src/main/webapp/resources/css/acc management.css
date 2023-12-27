@@ -1,0 +1,42 @@
+.mylist{
+    position: relative;
+    bottom: 1500px;
+    padding: 10px;
+    line-height: 5em; 
+    
+}
+.mylist ul{
+    list-style: none;
+    font-size: 30px;
+    font-weight: 1000;
+}
+.f-line {
+    border-left : 2px solid #aaaaaa;
+    height : 50%;
+    position: relative;
+    left: 300px;
+  }
+.s-line{
+    border: 1px solid #aaaaaa;
+    width : 80%;
+    position: relative;
+    left: 300px;
+    bottom: 1400px;
+  }
+.accMenu {
+    color: #666565;
+    position: relative;
+    bottom: 1750px;
+    left: 750px;
+}
+.accMenu ul {
+    list-style: none;
+    line-height: 5em;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.hhr {
+    position: relative;
+    bottom: 10px;
+    border: 1px solid #aaaaaa;
+}

@@ -1,0 +1,85 @@
+body {
+    width: 1500px;
+    margin: 0 auto;
+    height:3000px;
+    display: flex;
+    padding: 300px 0px;
+  
+}
+header {
+    position: relative;
+    left: 590px;
+    top: 100px;
+}
+.checkimg {
+    position: relative;
+    bottom: 230px;
+}
+
+div h1 {
+    position: relative;
+    bottom: 210px;
+    left: 10px;
+    height: 10px;
+}
+.singUPmessage h4{
+    width: 500px;
+}
+.singUPmessage ul{
+    display: flex;
+    list-style-type: none;
+}
+.singUPmessage li {
+    color: rgb(77, 120, 238);
+    padding: 0px;
+}
+.singUPmessage h4 {
+    position: relative;
+    bottom: 200px;
+    right: 55px;
+    padding: 15px;
+}
+.infomessage li{
+    list-style: none;
+    color: #aaaaaa;
+    position: relative;
+    right: 35px;
+    bottom: 190px;   
+}
+.infomessage ul {
+    justify-content: center;
+}
+.w-btn {
+    position: relative;
+    bottom: 190px;
+    left: 40px;
+    margin: 20px;
+    height: 45px;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.w-btn-blue {
+    background-color: #0090f9;
+    color: #d4dfe6;
+}
+.w-btn-blue-outline {
+    border: 3px solid #0090f9;
+    color: #6e6e6e;
+}
